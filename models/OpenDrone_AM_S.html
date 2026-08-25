@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>OpenDrone_AM_S — modelo 3D</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+<style>
+  html,body{margin:0;height:100%;background:#fff}
+  three-d-stage:not(:defined){visibility:hidden}
+  three-d-stage{width:100vw;height:100vh;display:block}
+</style>
+</head>
+<body>
+<three-d-stage name="OpenDrone_AM_S" background="#ffffff" autorotate></three-d-stage>
+<script src="../three-d-stage.js"></script>
+<script type="module">
+import { AM_S } from './build.js';
+const stage = document.querySelector('three-d-stage');
+const { THREE } = await stage.ready;
+const model = AM_S(THREE);
+stage.setObject(model);
+
+/* named camera framings, used for document stills */
+const views = {
+  hero:  [ 1.00, 0.42,  1.30],
+  top:   [ 0.02, 1.00,  0.05],
+  side:  [ 1.00, 0.06,  0.02],
+  front: [ 0.06, 0.18,  1.00],
+  rear:  [-0.20, 0.30, -1.00],
+  low:   [ 0.85,-0.18,  0.90]
+};
+window.setView = (n, zoom = 1) => {
+  const stg = document.querySelector('three-d-stage');
+  const c = stg._camera, ctr = stg._controls;
+  ctr.autoRotate = false;
+  const b = new THREE.Box3().setFromObject(model);
+  const s = b.getBoundingSphere(new THREE.Sphere());
+  const d = (s.radius / Math.tan((c.fov * Math.PI) / 360)) * 1.25 * zoom;
+  const dir = new THREE.Vector3(...(views[n] || views.hero)).normalize();
+  c.position.copy(s.center).add(dir.multiplyScalar(d));
+  ctr.target.copy(s.center);
+  ctr.update();
+};
+</script>
+</body>
+</html>

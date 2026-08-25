@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: Manrope, "Helvetica Neue", Helvetica, sans-serif; }
+  doc-page:not(:defined) { visibility: hidden; }
+  a { color: #b98424; text-decoration: none; }
+  a:hover { color: #145233; }
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<doc-page size="a4">
+  <section class="page" style="display:flex; flex-direction:column; padding:0.72in 0.75in 0.6in; box-sizing:border-box; color:#111413">
+
+    <header style="display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:14px; border-bottom:1px solid #e2e5e3">
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#b98424">OpenDrone · Hub Nacional de Drones</div>
+        <div style="font-size:11px; letter-spacing:0.02em; color:#6d7472">Memorando de plataforma · Conceito preliminar</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">REF. OD-T-007</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">PÁG. 1 / 2</div>
+      </div>
+    </header>
+
+    <div style="display:flex; align-items:baseline; gap:14px; margin-top:34px; flex-wrap:wrap">
+      <h1 style="margin:0; font-size:52px; font-weight:800; letter-spacing:-0.035em; line-height:0.98">OpenDrone_T</h1>
+      <span style="display:inline-block; padding:5px 10px; border-radius:3px; background:#b98424; color:#fff; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em">TERRESTRE · CIVIL</span>
+    </div>
+    <p style="margin:14px 0 0; max-width:5.4in; font-size:14.5px; line-height:1.6; color:#3c4341; text-wrap:pretty">Plataforma terrestre não tripulada sobre lagartas para abertura de vala, instalação e manutenção de redes eléctricas e de telecomunicações enterradas. Desenho inspirado nos equipamentos de vala e enfiamento de cabo, convertido em operação autónoma.</p>
+
+    <figure style="margin:26px 0 0; break-inside:avoid">
+      <img src="models/img/t-hero.png" alt="OpenDrone_T — vista de três quartos" style="display:block; width:100%; height:auto">
+      <figcaption style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 1 — Modelo 3D, vista de três quartos superior</figcaption>
+    </figure>
+
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:auto; padding-top:24px">
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/t-top.png" alt="Vista superior" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 2 — Planta</figcaption>
+      </figure>
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/t-side.png" alt="Vista lateral" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 3 — Perfil</figcaption>
+      </figure>
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/t-front.png" alt="Vista frontal" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 4 — Frontal</figcaption>
+      </figure>
+    </div>
+
+    <footer style="margin-top:20px; padding-top:12px; border-top:1px solid #e2e5e3; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#9aa19f">
+      <span>OpenDrone · Estratégia Nacional de Drones</span>
+      <span>Documento de trabalho</span>
+    </footer>
+  </section>
+
+  <section class="page" style="display:flex; flex-direction:column; padding:0.72in 0.75in 0.6in; box-sizing:border-box; color:#111413">
+
+    <header style="display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:14px; border-bottom:1px solid #e2e5e3">
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#b98424">OpenDrone_T · Ficha técnica</div>
+        <div style="font-size:11px; letter-spacing:0.02em; color:#6d7472">Valores preliminares, sujeitos a validação em fase de projecto</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">REF. OD-T-007</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">PÁG. 2 / 2</div>
+      </div>
+    </header>
+
+    <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:34px; margin-top:30px">
+      <div style="display:flex; flex-direction:column; gap:22px">
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b98424">Objectivo</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Cadastrar, localizar, instalar e manter redes eléctricas e de telecomunicações sob o solo, reduzindo o tempo de obra, o corte de via e a exposição de trabalhadores.</p>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b98424">Capacidades</h2>
+          <ul style="margin:0; padding-left:16px; font-size:13px; line-height:1.65; color:#3c4341">
+            <li>Abertura de vala contínua com registo georreferenciado</li>
+            <li>Enfiamento e assentamento de cabo a partir do tambor</li>
+            <li>Localização de infra-estrutura enterrada existente</li>
+            <li>Cadastro digital automático do traçado instalado</li>
+            <li>Inspecção e monitorização periódica da rede</li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b98424">Tecnologia</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Radar de penetração no solo e localizador electromagnético; posicionamento centimétrico com correcção diferencial; roda de corte instrumentada; manipulador auxiliar; registo em modelo de informação da rede.</p>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b98424">Impacto esperado</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Aceleração do enterramento da rede eléctrica — factor directo na resiliência a incêndios e a fenómenos extremos — e da expansão de fibra fora dos centros urbanos. Cliente natural nas concessionárias de energia e telecomunicações.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:0">
+        <h2 style="margin:0 0 4px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#b98424">Dados de referência</h2>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Classificação</span><span style="font-weight:600; text-align:right">Terrestre · Civil</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Comprimento</span><span style="font-weight:600; text-align:right">4,6 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Largura</span><span style="font-weight:600; text-align:right">2,4 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Altura</span><span style="font-weight:600; text-align:right">3,6 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Massa operacional</span><span style="font-weight:600; text-align:right">6,8 t</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Profundidade de vala</span><span style="font-weight:600; text-align:right">até 1,8 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Largura de vala</span><span style="font-weight:600; text-align:right">0,22 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Avanço em solo médio</span><span style="font-weight:600; text-align:right">120 m/h</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600; text-align:right">12 h (híbrida)</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Capacidade de tambor</span><span style="font-weight:600; text-align:right">2 000 m de cabo</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Locomoção</span><span style="font-weight:600; text-align:right">Lagartas de borracha</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Tripulação</span><span style="font-weight:600; text-align:right">Nenhuma</span></div>
+
+        <div style="margin-top:22px; padding:16px 18px; background:#f6f8f7; border-left:2px solid #b98424">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#b98424; margin-bottom:8px">Custo aproximado</div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Unidade em série (40+)</span><span style="font-weight:700">1,8–2,6 M€</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Desenvolvimento</span><span style="font-weight:700">≈ 60 M€</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Dia de operação</span><span style="font-weight:700">≈ 3 200 €</span></div>
+        </div>
+
+        <figure style="margin:22px 0 0">
+          <img src="models/img/t-rear.png" alt="Vista posterior" style="display:block; width:100%; height:auto">
+          <figcaption style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 5 — Vista posterior, tambor de cabo e mastro sensor</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <footer style="margin-top:auto; padding-top:12px; border-top:1px solid #e2e5e3; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#9aa19f">
+      <span>Valores preliminares — não constituem especificação de aquisição</span>
+      <span>OD-T-007</span>
+    </footer>
+  </section>
+</doc-page>
+
+</x-dc>
+</body>
+</html>

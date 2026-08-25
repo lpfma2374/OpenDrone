@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: Manrope, "Helvetica Neue", Helvetica, sans-serif; }
+  doc-page:not(:defined) { visibility: hidden; }
+  a { color: #1f7a4d; text-decoration: none; }
+  a:hover { color: #145233; }
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<doc-page size="a4">
+  <section class="page" style="display:flex; flex-direction:column; padding:0.72in 0.75in 0.6in; box-sizing:border-box; color:#111413">
+
+    <header style="display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:14px; border-bottom:1px solid #e2e5e3">
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#1f7a4d">OpenDrone · Hub Nacional de Drones</div>
+        <div style="font-size:11px; letter-spacing:0.02em; color:#6d7472">Memorando de plataforma · Conceito preliminar</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">REF. OD-AM-001</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">PÁG. 1 / 2</div>
+      </div>
+    </header>
+
+    <div style="display:flex; align-items:baseline; gap:14px; margin-top:34px">
+      <h1 style="margin:0; font-size:52px; font-weight:800; letter-spacing:-0.035em; line-height:0.98">OpenDrone_AM</h1>
+      <span style="display:inline-block; padding:5px 10px; border-radius:3px; background:#1f7a4d; color:#fff; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em">AÉREO · MILITAR</span>
+    </div>
+    <p style="margin:14px 0 0; max-width:5.4in; font-size:14.5px; line-height:1.6; color:#3c4341; text-wrap:pretty">Plataforma aérea não tripulada de ataque, de configuração delta-canard, concebida para operar em substituição de missões hoje atribuídas a caças tripulados. Desenho inspirado na arquitectura aerodinâmica do caça europeu de geração 4,5, adaptada a operação autónoma assistida por inteligência artificial.</p>
+
+    <figure style="margin:26px 0 0; break-inside:avoid">
+      <img src="models/img/am-hero.png" alt="OpenDrone_AM — vista de três quartos" style="display:block; width:100%; height:auto">
+      <figcaption style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 1 — Modelo 3D, vista de três quartos superior</figcaption>
+    </figure>
+
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:auto; padding-top:24px">
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/am-top.png" alt="Vista superior" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 2 — Planta</figcaption>
+      </figure>
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/am-side.png" alt="Vista lateral" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 3 — Perfil</figcaption>
+      </figure>
+      <figure style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="models/img/am-front.png" alt="Vista frontal" style="display:block; width:100%; height:1.5in; object-fit:contain">
+        <figcaption style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 4 — Frontal</figcaption>
+      </figure>
+    </div>
+
+    <footer style="margin-top:20px; padding-top:12px; border-top:1px solid #e2e5e3; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#9aa19f">
+      <span>OpenDrone · Estratégia Nacional de Drones</span>
+      <span>Documento de trabalho</span>
+    </footer>
+  </section>
+
+  <section class="page" style="display:flex; flex-direction:column; padding:0.72in 0.75in 0.6in; box-sizing:border-box; color:#111413">
+
+    <header style="display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:14px; border-bottom:1px solid #e2e5e3">
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#1f7a4d">OpenDrone_AM · Ficha técnica</div>
+        <div style="font-size:11px; letter-spacing:0.02em; color:#6d7472">Valores preliminares, sujeitos a validação em fase de projecto</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:3px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">REF. OD-AM-001</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6d7472">PÁG. 2 / 2</div>
+      </div>
+    </header>
+
+    <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:34px; margin-top:30px">
+      <div style="display:flex; flex-direction:column; gap:22px">
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Objectivo</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Neutralizar alvos e ameaças em ambiente contestado, sem exposição de tripulação. A plataforma opera em par com meios tripulados ou em enxame autónomo, com decisão de empenhamento sempre sujeita a validação humana.</p>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Capacidades</h2>
+          <ul style="margin:0; padding-left:16px; font-size:13px; line-height:1.65; color:#3c4341">
+            <li>Ataque a alvos terrestres, navais e aéreos designados</li>
+            <li>Reconhecimento armado e permanência sobre a área de operações</li>
+            <li>Navegação autónoma com degradação ou ausência de GNSS</li>
+            <li>Operação coordenada em formação de 2 a 8 plataformas</li>
+            <li>Ligação segura a comando e controlo nacional via satélite</li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Tecnologia</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Núcleo de autonomia com processamento a bordo para reconhecimento de alvos, fusão de sensores e planeamento de rota; ligação de dados encriptada; sensor electro-óptico e infravermelho estabilizado; guerra electrónica defensiva.</p>
+        </div>
+        <div>
+          <h2 style="margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Impacto esperado</h2>
+          <p style="margin:0; font-size:13px; line-height:1.6; color:#3c4341">Capacidade soberana de dissuasão a uma fracção do custo por hora de voo de um caça tripulado. Cadeia de valor nacional em estruturas compostas, propulsão, aviónica e software crítico, com transferência directa para o tecido universitário.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:0">
+        <h2 style="margin:0 0 4px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Dados de referência</h2>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Classificação</span><span style="font-weight:600; text-align:right">Aéreo · Militar</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Comprimento</span><span style="font-weight:600; text-align:right">12,0 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Envergadura</span><span style="font-weight:600; text-align:right">11,2 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Altura</span><span style="font-weight:600; text-align:right">3,4 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Peso máx. à decolagem</span><span style="font-weight:600; text-align:right">7 500 kg</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Carga útil</span><span style="font-weight:600; text-align:right">1 800 kg</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600; text-align:right">6 h</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Raio de acção</span><span style="font-weight:600; text-align:right">1 200 km</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Velocidade máxima</span><span style="font-weight:600; text-align:right">Mach 0,92</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Tecto de serviço</span><span style="font-weight:600; text-align:right">13 500 m</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Estações de carga</span><span style="font-weight:600; text-align:right">4 subalares</span></div>
+        <div style="display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #ecefed; font-size:12.5px"><span style="color:#6d7472">Tripulação</span><span style="font-weight:600; text-align:right">Nenhuma</span></div>
+
+        <div style="margin-top:22px; padding:16px 18px; background:#f6f8f7; border-left:2px solid #1f7a4d">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#1f7a4d; margin-bottom:8px">Custo aproximado</div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Unidade em série (40+)</span><span style="font-weight:700">12–18 M€</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Desenvolvimento</span><span style="font-weight:700">≈ 380 M€</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0"><span style="color:#6d7472">Hora de voo</span><span style="font-weight:700">≈ 6 000 €</span></div>
+        </div>
+
+        <figure style="margin:22px 0 0">
+          <img src="models/img/am-rear.png" alt="Vista posterior" style="display:block; width:100%; height:auto">
+          <figcaption style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#8b9290">Fig. 5 — Vista posterior, saídas de propulsão</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <footer style="margin-top:auto; padding-top:12px; border-top:1px solid #e2e5e3; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#9aa19f">
+      <span>Valores preliminares — não constituem especificação de aquisição</span>
+      <span>OD-AM-001</span>
+    </footer>
+  </section>
+</doc-page>
+
+</x-dc>
+</body>
+</html>

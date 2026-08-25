@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>OpenDrone_AM — modelo 3D</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+<style>
+  html,body{margin:0;height:100%;background:#fff}
+  three-d-stage:not(:defined){visibility:hidden}
+  three-d-stage{width:100vw;height:100vh;display:block}
+</style>
+</head>
+<body>
+<three-d-stage name="OpenDrone_AM" background="#ffffff" autorotate></three-d-stage>
+<script src="../three-d-stage.js"></script>
+<script type="module">
+const stage = document.querySelector('three-d-stage');
+const { THREE } = await stage.ready;
+
+const mat = {
+  shell:  new THREE.MeshStandardMaterial({ name:'shell',  color:0xe9ebea, roughness:0.42, metalness:0.22 }),
+  panel:  new THREE.MeshStandardMaterial({ name:'panel',  color:0xa8adad, roughness:0.55, metalness:0.30 }),
+  dark:   new THREE.MeshStandardMaterial({ name:'dark',   color:0x2b3030, roughness:0.35, metalness:0.20 }),
+  accent: new THREE.MeshStandardMaterial({ name:'accent', color:0x2f7d4f, roughness:0.45, metalness:0.10 }),
+  metal:  new THREE.MeshStandardMaterial({ name:'metal',  color:0x8f9494, roughness:0.30, metalness:0.38 })
+};
+
+const model = new THREE.Group();
+model.name = 'OpenDrone_AM';
+const add = (name, geo, m, fn) => {
+  const mesh = new THREE.Mesh(geo, m); mesh.name = name;
+  mesh.castShadow = true; mesh.receiveShadow = true;
+  if (fn) fn(mesh); model.add(mesh); return mesh;
+};
+
+/* fuselage — lathe profile along +Z (nose at +Z), flattened cross-section */
+const prof = [[0.02,6.4],[0.16,6.15],[0.34,5.65],[0.54,4.85],[0.70,3.70],[0.79,2.00],
+              [0.82,0.00],[0.80,-2.00],[0.74,-3.60],[0.66,-4.60],[0.62,-5.30],[0.60,-5.60],[0.0,-5.60]]
+              .map(([r,y]) => new THREE.Vector2(r,y));
+const fuse = add('fuselage', new THREE.LatheGeometry(prof, 48), mat.shell, m => {
+  m.geometry.rotateX(Math.PI/2);
+  m.scale.set(1.18, 0.86, 1);
+});
+
+/* delta wing planform (half), extruded and laid flat */
+function planform(pts, thickness) {
+  const s = new THREE.Shape();
+  s.moveTo(pts[0][0], pts[0][1]);
+  for (let i=1;i<pts.length;i++) s.lineTo(pts[i][0], pts[i][1]);
+  s.closePath();
+  const g = new THREE.ExtrudeGeometry(s, { depth: thickness, bevelEnabled:false, curveSegments:4 });
+  g.rotateX(Math.PI/2);
+  return g;
+}
+const wingPts = [[0.55,2.60],[5.60,-2.10],[5.60,-2.95],[2.20,-3.90],[0.55,-3.90]];
+for (const side of [1,-1]) {
+  add(side>0 ? 'wing_right' : 'wing_left', planform(wingPts, 0.26), mat.shell, m => {
+    m.scale.x = side; m.position.y = 0.12;
+  });
+}
+
+/* canards, forward of the wing */
+const canardPts = [[0.65,5.00],[2.55,4.05],[2.55,3.60],[0.65,3.20]];
+for (const side of [1,-1]) {
+  add(side>0 ? 'canard_right' : 'canard_left', planform(canardPts, 0.16), mat.panel, m => {
+    m.scale.x = side; m.position.y = 0.40; m.rotation.z = side * -0.06;
+  });
+}
+
+/* canted twin fins */
+const finPts = [[0.0,-2.40],[0.35,-4.55],[1.10,-4.90],[1.35,-2.90]];
+for (const side of [1,-1]) {
+  add(side>0 ? 'fin_right' : 'fin_left', planform(finPts, 0.14), mat.shell, m => {
+    m.geometry.rotateZ(Math.PI/2);
+    m.scale.x = side;
+    m.position.set(side*0.72, 0.42, 0);
+    m.rotation.z = side * 0.42;
+  });
+}
+
+/* side air intakes */
+for (const side of [1,-1]) {
+  add(side>0 ? 'intake_right' : 'intake_left', new THREE.BoxGeometry(0.50, 0.62, 2.60), mat.panel, m => {
+    m.position.set(side*0.90, -0.16, 2.20);
+    m.rotation.y = side * -0.05;
+  });
+  add(side>0 ? 'intake_lip_right' : 'intake_lip_left', new THREE.BoxGeometry(0.54, 0.66, 0.14), mat.dark, m => {
+    m.position.set(side*0.92, -0.16, 3.52);
+  });
+}
+
+/* exhaust nozzles */
+for (const side of [1,-1]) {
+  add(side>0 ? 'nozzle_right' : 'nozzle_left', new THREE.CylinderGeometry(0.42, 0.36, 1.30, 32), mat.metal, m => {
+    m.geometry.rotateX(Math.PI/2);
+    m.position.set(side*0.44, -0.05, -5.85);
+  });
+  add(side>0 ? 'nozzle_inner_right' : 'nozzle_inner_left', new THREE.CylinderGeometry(0.30, 0.30, 0.30, 32), mat.dark, m => {
+    m.geometry.rotateX(Math.PI/2);
+    m.position.set(side*0.44, -0.05, -6.42);
+  });
+}
+
+/* sensor / EO turret under the nose, dorsal satcom spine */
+add('sensor_turret', new THREE.SphereGeometry(0.44, 32, 24), mat.dark, m => {
+  m.scale.set(1, 0.82, 1.15); m.position.set(0, -0.52, 4.35);
+});
+add('satcom_spine', new THREE.CapsuleGeometry(0.19, 1.70, 12, 24), mat.shell, m => {
+  m.geometry.rotateX(Math.PI/2);
+  m.scale.set(1.6, 0.55, 1);
+  m.position.set(0, 0.48, 1.90);
+});
+add('datalink_blade', new THREE.BoxGeometry(0.08, 0.30, 0.70), mat.accent, m => {
+  m.position.set(0, 0.68, -0.40);
+});
+
+/* underwing pylons and stores */
+const stations = [1.85, 3.30];
+for (const side of [1,-1]) {
+  stations.forEach((x, i) => {
+    add(`pylon_${side>0?'r':'l'}${i+1}`, new THREE.BoxGeometry(0.16, 0.44, 1.10), mat.panel, m => {
+      m.position.set(side*x, -0.28, -1.05 - i*0.55);
+    });
+    add(`store_${side>0?'r':'l'}${i+1}`, new THREE.CapsuleGeometry(0.15, 1.70, 10, 24), mat.dark, m => {
+      m.geometry.rotateX(Math.PI/2);
+      m.position.set(side*x, -0.62, -0.85 - i*0.55);
+    });
+    add(`store_fin_${side>0?'r':'l'}${i+1}`, new THREE.BoxGeometry(0.48, 0.05, 0.28), mat.accent, m => {
+      m.position.set(side*x, -0.62, -1.78 - i*0.55);
+    });
+  });
+}
+
+/* accent wing roundel bars, flush on the upper wing surface */
+for (const side of [1,-1]) {
+  add(side>0 ? 'marking_right' : 'marking_left', new THREE.BoxGeometry(0.90, 0.04, 0.34), mat.accent, m => {
+    m.position.set(side*2.10, 0.255, -0.30);
+  });
+}
+
+const box = new THREE.Box3().setFromObject(model);
+model.position.y -= box.min.y;
+stage.setObject(model);
+
+/* named camera framings, used for document stills */
+const views = {
+  hero:  [ 1.00, 0.42,  1.30],
+  top:   [ 0.02, 1.00,  0.05],
+  side:  [ 1.00, 0.06,  0.02],
+  front: [ 0.06, 0.18,  1.00],
+  rear:  [-0.20, 0.30, -1.00],
+  low:   [ 0.85,-0.18,  0.90]
+};
+window.setView = (n, zoom = 1) => {
+  const stg = document.querySelector('three-d-stage');
+  const c = stg._camera, ctr = stg._controls;
+  ctr.autoRotate = false;
+  const b = new THREE.Box3().setFromObject(model);
+  const s = b.getBoundingSphere(new THREE.Sphere());
+  const d = (s.radius / Math.tan((c.fov * Math.PI) / 360)) * 1.25 * zoom;
+  const dir = new THREE.Vector3(...(views[n] || views.hero)).normalize();
+  c.position.copy(s.center).add(dir.multiplyScalar(d));
+  ctr.target.copy(s.center);
+  ctr.update();
+};
+</script>
+</body>
+</html>

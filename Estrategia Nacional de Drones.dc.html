@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: Manrope, "Helvetica Neue", Helvetica, sans-serif; background: #ffffff; }
+  a { color: #1f7a4d; text-decoration: none; }
+  a:hover { color: #145636; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Capa" data-screen-label="01" data-speaker-notes="Apresentação de 20 minutos. Objetivo: obter decisão sobre o fundo e o hub." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:space-between; font-family:Manrope,sans-serif">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#5fbf8e">OpenDrone</div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.16em; color:#7d8785">Documento de trabalho · 2026</div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:36px">
+    <h1 style="margin:0; font-size:132px; font-weight:800; letter-spacing:-0.045em; line-height:0.94; max-width:1400px">Estratégia Nacional<br>de Drones</h1>
+    <div style="width:180px; height:4px; background:#5fbf8e"></div>
+    <p style="margin:0; font-size:38px; line-height:1.45; color:#c8cfcd; max-width:1150px; text-wrap:pretty">Sete plataformas não tripuladas, um hub industrial nacional e um fundo soberano para as financiar.</p>
+  </div>
+  <div style="display:flex; gap:64px; font-family:'IBM Plex Mono',monospace; font-size:24px; letter-spacing:0.1em; color:#7d8785">
+    <span>4 domínios</span><span>7 plataformas</span><span>1 fundo</span>
+  </div>
+</section>
+
+<section data-label="Tese" data-screen-label="02" data-speaker-notes="A tese central: o problema não é o montante, é o destino do montante." style="background:#fff; color:#111413; padding:110px 130px; display:flex; flex-direction:column; justify-content:center; gap:48px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">A tese</div>
+  <h2 style="margin:0; font-size:82px; font-weight:700; letter-spacing:-0.035em; line-height:1.12; max-width:1500px; text-wrap:pretty">Portugal já gasta mais de seis mil milhões de euros por ano em defesa. A decisão que falta não é quanto gastar — é <span style="color:#1f7a4d">onde esse dinheiro é produzido</span>.</h2>
+  <p style="margin:0; font-size:32px; line-height:1.55; color:#3c4341; max-width:1250px; text-wrap:pretty">O mesmo vale para o combate a incêndios, para a vigilância do mar e para o enterramento da rede eléctrica. São quatro problemas nacionais com a mesma resposta industrial.</p>
+</section>
+
+<section data-label="Índice" data-screen-label="03" data-speaker-notes="Percurso do documento." style="background:#fff; color:#111413; padding:110px 130px; display:flex; flex-direction:column; gap:56px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.035em">Percurso</h2>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:56px 72px">
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">01</div><div style="font-size:38px; font-weight:700">Contexto</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Mercado, despesa nacional e as quatro frentes</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">02</div><div style="font-size:38px; font-weight:700">Plataformas</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Sete conceitos, do ar ao fundo do mar</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">03</div><div style="font-size:38px; font-weight:700">Hub industrial</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Fábrica, campo de ensaio e academia</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">04</div><div style="font-size:38px; font-weight:700">Parcerias</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Defesa, protecção civil, mar e energia</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">05</div><div style="font-size:38px; font-weight:700">Financiamento</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Contribuição sectorial e fundo soberano</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:3px solid #111413; padding-top:22px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">06</div><div style="font-size:38px; font-weight:700">Execução</div><div style="font-size:26px; color:#6d7472; line-height:1.5">Cronograma, métricas e decisões</div></div>
+  </div>
+</section>
+
+<section data-label="Cap. 01" data-screen-label="04" data-speaker-notes="Abertura do capítulo de contexto." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 01</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">Contexto</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">O que mudou no mercado, o que Portugal passou a gastar e onde esse dinheiro pára.</p>
+</section>
+
+<section data-label="Mercado" data-screen-label="05" data-speaker-notes="O mercado triplica em dez anos. As estimativas variam entre casas de análise; usamos duas para mostrar o intervalo." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:52px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">Mercado global · drones militares</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1450px">O mercado de plataformas não tripuladas triplica na próxima década</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:64px; margin-top:8px">
+    <div style="display:flex; flex-direction:column; gap:12px; border-top:3px solid #1f7a4d; padding-top:26px">
+      <div style="font-size:96px; font-weight:800; letter-spacing:-0.04em; line-height:1">18,2</div>
+      <div style="font-size:28px; color:#3c4341; line-height:1.4">mil milhões de dólares em 2025</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; border-top:3px solid #1f7a4d; padding-top:26px">
+      <div style="font-size:96px; font-weight:800; letter-spacing:-0.04em; line-height:1">66,5</div>
+      <div style="font-size:28px; color:#3c4341; line-height:1.4">mil milhões projectados para 2035</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; border-top:3px solid #1f7a4d; padding-top:26px">
+      <div style="font-size:96px; font-weight:800; letter-spacing:-0.04em; line-height:1">4,19</div>
+      <div style="font-size:28px; color:#3c4341; line-height:1.4">mil milhões é a fatia europeia em 2025</div>
+    </div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1350px; text-wrap:pretty">O crescimento é atribuído à despesa de defesa, aos sistemas autónomos e à procura de vigilância persistente. A fatia europeia mais do que duplica no mesmo período, para 10,1 mil milhões.</p>
+  <div style="margin-top:auto; font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">Global Market Insights (2026) · SNS Insider (2026)</div>
+</section>
+
+<section data-label="Despesa PT" data-screen-label="06" data-speaker-notes="Portugal cumpriu 2% do PIB em 2025 pela primeira vez. A meta acordada na NATO é 5% até 2035." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:48px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">Despesa nacional em defesa</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">A despesa quase duplicou em dois anos — e vai duplicar outra vez</h2>
+  </div>
+  <div style="display:flex; align-items:flex-end; gap:56px; height:380px">
+    <div style="display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:18px; flex:1"><div style="font-family:'IBM Plex Mono',monospace; font-size:30px">3 563</div><div style="width:100%; height:150px; background:#dfe4e2"></div><div style="font-size:26px; color:#6d7472">2023</div></div>
+    <div style="display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:18px; flex:1"><div style="font-family:'IBM Plex Mono',monospace; font-size:30px">4 482</div><div style="width:100%; height:189px; background:#c4ccc9"></div><div style="font-size:26px; color:#6d7472">2024</div></div>
+    <div style="display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:18px; flex:1"><div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:500; color:#1f7a4d">6 118</div><div style="width:100%; height:258px; background:#1f7a4d"></div><div style="font-size:26px; color:#111413; font-weight:600">2025</div></div>
+    <div style="display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:18px; flex:1"><div style="font-family:'IBM Plex Mono',monospace; font-size:30px; color:#6d7472">≈ 15 000</div><div style="width:100%; height:340px; background:repeating-linear-gradient(135deg,#e8ecea 0,#e8ecea 8px,#fff 8px,#fff 16px); border:2px dashed #b6bfbc"></div><div style="font-size:26px; color:#6d7472">2035 · meta 5%</div></div>
+  </div>
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:60px">
+    <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1050px; text-wrap:pretty">Em 2025 Portugal atingiu 2,1% do PIB, cumprindo a meta da NATO pela primeira vez. A meta acordada de 5% até 2035 implica mais do dobro da despesa actual.</p>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f; text-align:right; white-space:nowrap">milhões de euros<br>Relatório NATO · ECO (2026)</div>
+  </div>
+</section>
+
+<section data-label="O problema" data-screen-label="07" data-speaker-notes="O governo já identificou drones e sistemas autónomos como prioridade. Falta capacidade industrial." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">O problema</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">A prioridade já está escrita. A capacidade de a executar não existe.</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start">
+    <div style="display:flex; flex-direction:column; gap:34px">
+      <div style="border-left:3px solid #1f7a4d; padding-left:28px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">A prioridade está declarada</div><p style="margin:0; font-size:28px; line-height:1.5; color:#3c4341">O Ministério da Defesa aponta a ciberdefesa, os drones, a inteligência artificial, os sensores e os sistemas autónomos como sectores tecnológicos a priorizar, para posicionar Portugal nas cadeias europeias de valor.</p></div>
+      <div style="border-left:3px solid #1f7a4d; padding-left:28px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">A restrição é industrial</div><p style="margin:0; font-size:28px; line-height:1.5; color:#3c4341">O IISS aponta a lenta reforma das aquisições e a capacidade industrial limitada como travões à Europa no aumento de produção — em particular na defesa aérea.</p></div>
+    </div>
+    <div style="background:#f6f8f7; padding:52px; display:flex; flex-direction:column; gap:28px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Consequência</div>
+      <div style="font-size:44px; font-weight:700; line-height:1.25; letter-spacing:-0.02em">Sem base industrial, o aumento da despesa converte-se em importação: emprego, propriedade intelectual e manutenção ficam fora do país.</div>
+      <div style="font-size:26px; color:#6d7472; line-height:1.5">O investimento em armamento e equipamentos no OE2026 é de 564 milhões de euros — verba de reequipamento sem contrapartida industrial garantida.</div>
+    </div>
+  </div>
+  <div style="margin-top:auto; font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">Ministério da Defesa · OE2026 · IISS Balanço Militar 2026</div>
+</section>
+
+<section data-label="Quatro frentes" data-screen-label="08" data-speaker-notes="Quatro problemas nacionais, uma resposta industrial." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:48px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Quatro frentes nacionais, uma resposta</h2>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:44px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #2f7d4f; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#2f7d4f">DEFESA</div><div style="font-size:34px; font-weight:700; line-height:1.2">Vigilância do espaço aéreo e do flanco atlântico</div><p style="margin:0; font-size:25px; line-height:1.5; color:#3c4341">Meios de reconhecimento e guerra electrónica próprios, sem exposição de tripulação.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #1c6f8c; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#1c6f8c">MAR</div><div style="font-size:34px; font-weight:700; line-height:1.2">A maior zona económica exclusiva da Europa</div><p style="margin:0; font-size:25px; line-height:1.5; color:#3c4341">Fiscalização de superfície, vigilância submarina e cartografia do fundo.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #d4642a; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#d4642a">FLORESTA</div><div style="font-size:34px; font-weight:700; line-height:1.2">Ataque à ignição nos primeiros minutos</div><p style="margin:0; font-size:25px; line-height:1.5; color:#3c4341">Vigilância térmica permanente e largada autónoma de noite e no fumo.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #b98424; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#b98424">ENERGIA E REDES</div><div style="font-size:34px; font-weight:700; line-height:1.2">Enterrar a rede e levar fibra ao interior</div><p style="margin:0; font-size:25px; line-height:1.5; color:#3c4341">Abertura de vala, assentamento de cabo e cadastro digital automático.</p></div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">As quatro frentes partilham sensores, software de autonomia, propulsão eléctrica e materiais compostos. É essa partilha que torna um programa único mais barato do que quatro programas separados.</p>
+</section>
+
+<section data-label="Cap. 02" data-screen-label="09" data-speaker-notes="Abertura do capítulo das plataformas." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 02</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">Sete plataformas</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">Quatro militares, três civis. Dois no ar, três na água, uma no fundo do mar, uma em terra.</p>
+</section>
+
+<section data-label="Matriz" data-screen-label="10" data-speaker-notes="Visão geral. Os modelos 3D e os memos de duas páginas acompanham este documento." style="background:#fff; color:#111413; padding:88px 120px; display:flex; flex-direction:column; gap:40px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">A família OpenDrone</h2>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:0 0 16px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.12em; text-transform:uppercase; color:#6d7472"><span>Designação</span><span>Domínio</span><span>Função</span><span>Unidade</span><span>Desenv.</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AM</span><span style="color:#2f7d4f">Aéreo · Militar</span><span style="color:#3c4341">Reconhecimento e ataque de longa duração</span><span style="font-family:'IBM Plex Mono',monospace">12–18 M€</span><span style="font-family:'IBM Plex Mono',monospace">380 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AM_S</span><span style="color:#2f7d4f">Aéreo · Militar</span><span style="color:#3c4341">Furtivo: vigilância e guerra electrónica</span><span style="font-family:'IBM Plex Mono',monospace">16–24 M€</span><span style="font-family:'IBM Plex Mono',monospace">520 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AC_B</span><span style="color:#d4642a">Aéreo · Civil</span><span style="color:#3c4341">Combate a incêndios em fase de ignição</span><span style="font-family:'IBM Plex Mono',monospace">7–11 M€</span><span style="font-family:'IBM Plex Mono',monospace">180 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AQM</span><span style="color:#1c6f8c">Aquático · Militar</span><span style="color:#3c4341">Intercepção rápida de superfície</span><span style="font-family:'IBM Plex Mono',monospace">4–7 M€</span><span style="font-family:'IBM Plex Mono',monospace">120 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AQM_S</span><span style="color:#1c6f8c">Aquático · Militar</span><span style="color:#3c4341">Vigilância submarina e do fundo do mar</span><span style="font-family:'IBM Plex Mono',monospace">22–30 M€</span><span style="font-family:'IBM Plex Mono',monospace">460 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_AQM_I</span><span style="color:#1c6f8c">Aquático · Civil</span><span style="color:#3c4341">Investigação e intervenção em profundidade</span><span style="font-family:'IBM Plex Mono',monospace">3,5–5,5 M€</span><span style="font-family:'IBM Plex Mono',monospace">90 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.15fr 1fr 2.1fr 0.9fr 0.9fr; gap:28px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:center"><span style="font-weight:700">OpenDrone_T</span><span style="color:#b98424">Terrestre · Civil</span><span style="color:#3c4341">Vala, cabo e cadastro de redes enterradas</span><span style="font-family:'IBM Plex Mono',monospace">1,8–2,6 M€</span><span style="font-family:'IBM Plex Mono',monospace">60 M€</span></div>
+  </div>
+  <div style="display:flex; justify-content:space-between; align-items:baseline; padding-top:8px"><div style="font-size:30px; font-weight:700">Desenvolvimento total</div><div style="font-family:'IBM Plex Mono',monospace; font-size:40px; font-weight:500; color:#1f7a4d">1 810 M€</div></div>
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">Valores preliminares de conceito — não constituem especificação de aquisição</div>
+</section>
+
+<section data-label="AM" data-screen-label="11" data-speaker-notes="Plataforma de referência do programa: é a que puxa sensores, propulsão e autonomia." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1.25fr 1fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#2f7d4f; color:#fff">AÉREO · MILITAR</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-AM-001</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AM</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Reconhecimento persistente e ataque de precisão sobre território nacional e área de interesse atlântica. Plataforma de referência do programa.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Envergadura</span><span style="font-weight:600">20,1 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">27 h</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Carga útil</span><span style="font-weight:600">1 700 kg</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Raio de acção</span><span style="font-weight:600">1 850 km</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Cliente primário: Força Aérea. Uso secundário em busca e salvamento no Atlântico.</div>
+  </div>
+  <img src="models/img/am-hero.png" alt="OpenDrone_AM" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+</section>
+
+<section data-label="AM_S" data-screen-label="12" data-speaker-notes="Segunda geração aérea: baixa observabilidade e guerra electrónica." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1fr 1.25fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <img src="models/img/am_s-hero.png" alt="OpenDrone_AM_S" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#2f7d4f; color:#fff">AÉREO · MILITAR · FURTIVO</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-AMS-002</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AM_S</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Ala voadora de baixa observabilidade para vigilância e guerra electrónica em espaço aéreo negado.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Envergadura</span><span style="font-weight:600">16,4 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">14 h</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Carga interna</span><span style="font-weight:600">1 400 kg</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Velocidade</span><span style="font-weight:600">Mach 0,80</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Cliente primário: Força Aérea. Competência crítica: materiais furtivos e biblioteca de ameaças.</div>
+  </div>
+</section>
+
+<section data-label="AC_B" data-screen-label="13" data-speaker-notes="A plataforma com retorno público mais imediato e mais visível." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1.25fr 1fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#d4642a; color:#fff">AÉREO · CIVIL</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-ACB-003</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AC_B</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Contenção de ignições nos primeiros minutos, incluindo de noite e em fumo denso, quando os meios tripulados estão limitados.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Capacidade de água</span><span style="font-weight:600">3 000 L</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Ciclo de recarga</span><span style="font-weight:600">12 min</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">5 h</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Hora de voo</span><span style="font-weight:600">≈ 2 400 €</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Cliente primário: Autoridade Nacional de Emergência e Protecção Civil.</div>
+  </div>
+  <img src="models/img/ac_b-hero.png" alt="OpenDrone_AC_B" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+</section>
+
+<section data-label="AQM" data-screen-label="14" data-speaker-notes="Fiscalização da ZEE a custo por dia de mar muito inferior a um navio tripulado." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1fr 1.25fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <img src="models/img/aqm-hero.png" alt="OpenDrone_AQM" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#1c6f8c; color:#fff">AQUÁTICO · MILITAR</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-AQM-004</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AQM</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Embarcação de intercepção rápida para a zona económica exclusiva, a orla costeira e as vias fluviais.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Comprimento</span><span style="font-weight:600">15,0 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Velocidade máx.</span><span style="font-weight:600">45 nós</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">900 nmi</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Dia de operação</span><span style="font-weight:600">≈ 9 000 €</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Clientes: Marinha, Autoridade Marítima, GNR. Empenhamento sob validação humana.</div>
+  </div>
+</section>
+
+<section data-label="AQM_S" data-screen-label="15" data-speaker-notes="Protecção de cabos submarinos: infraestrutura crítica sem vigilância nacional própria." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1.25fr 1fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#1c6f8c; color:#fff">AQUÁTICO · MILITAR · SUBMARINO</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-AQMS-005</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AQM_S</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Patrulha submarina silenciosa e protecção da infra-estrutura no fundo do mar — cabos de dados e condutas de energia.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Comprimento</span><span style="font-weight:600">18,0 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Profundidade máx.</span><span style="font-weight:600">300 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">30 dias</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Carga útil</span><span style="font-weight:600">1 200 kg</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Cliente primário: Marinha. Competência crítica: acústica submarina e sistemas de pressão.</div>
+  </div>
+  <img src="models/img/aqm_s-hero.png" alt="OpenDrone_AQM_S" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+</section>
+
+<section data-label="AQM_I" data-screen-label="16" data-speaker-notes="A ponte para a comunidade científica e um serviço exportável." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1fr 1.25fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <img src="models/img/aqm_i-hero.png" alt="OpenDrone_AQM_I" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#1c6f8c; color:#fff">AQUÁTICO · CIVIL</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-AQMI-006</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_AQM_I</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Cartografia, monitorização e intervenção até 4 000 metros — o mar português e os cabos que o atravessam.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Profundidade máx.</span><span style="font-weight:600">4 000 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Autonomia</span><span style="font-weight:600">24 h</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Manipulador</span><span style="font-weight:600">6 eixos</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Dia de operação</span><span style="font-weight:600">≈ 6 500 €</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Clientes: institutos de investigação marinha, universidades, operadores de cabo.</div>
+  </div>
+</section>
+
+<section data-label="T" data-screen-label="17" data-speaker-notes="A plataforma com mercado privado imediato: concessionárias de energia e telecomunicações." style="background:#fff; color:#111413; padding:88px 120px; display:grid; grid-template-columns:1.25fr 1fr; gap:80px; align-items:center; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:30px">
+    <div style="display:flex; align-items:center; gap:20px"><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; padding:8px 14px; background:#b98424; color:#fff">TERRESTRE · CIVIL</span><span style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f">OD-T-007</span></div>
+    <h2 style="margin:0; font-size:72px; font-weight:800; letter-spacing:-0.04em; line-height:1">OpenDrone_T</h2>
+    <p style="margin:0; font-size:30px; line-height:1.5; color:#3c4341; max-width:800px; text-wrap:pretty">Abertura de vala, assentamento de cabo e cadastro digital do traçado — para enterrar a rede eléctrica e levar fibra ao interior.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 48px; margin-top:6px">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Profundidade de vala</span><span style="font-weight:600">1,8 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Avanço</span><span style="font-weight:600">120 m/h</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Tambor de cabo</span><span style="font-weight:600">2 000 m</span></div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e5e3; padding-bottom:12px; font-size:26px"><span style="color:#6d7472">Dia de operação</span><span style="font-weight:600">≈ 3 200 €</span></div>
+    </div>
+    <div style="font-size:26px; color:#6d7472; line-height:1.5">Clientes: concessionárias de distribuição eléctrica e operadores de telecomunicações.</div>
+  </div>
+  <img src="models/img/t-hero.png" alt="OpenDrone_T" style="display:block; width:100%; height:auto; max-height:760px; object-fit:contain">
+</section>
+
+<section data-label="Cap. 03" data-screen-label="18" data-speaker-notes="Abertura do capítulo do hub." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 03</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">O hub industrial</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">Uma fábrica, um campo de ensaio e uma academia no mesmo perímetro.</p>
+</section>
+
+<section data-label="O hub" data-screen-label="19" data-speaker-notes="Três funções no mesmo sítio. A proximidade é o que reduz o ciclo de iteração." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:48px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">Conceito</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Três funções, um perímetro</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:52px; flex:1">
+    <div style="background:#f6f8f7; padding:48px; display:flex; flex-direction:column; gap:20px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#1f7a4d">01 · PRODUÇÃO</div><div style="font-size:40px; font-weight:700; line-height:1.15">Montagem final e integração</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Compósitos, integração de sensores, bancada de propulsão e linha de montagem comum às sete plataformas.</p></div>
+    <div style="background:#f6f8f7; padding:48px; display:flex; flex-direction:column; gap:20px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#1f7a4d">02 · ENSAIO</div><div style="font-size:40px; font-weight:700; line-height:1.15">Pista, tanque e espaço segregado</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Pista própria, tanque de pressão, acesso a mar aberto e espaço aéreo segregado para ensaio de autonomia.</p></div>
+    <div style="background:#f6f8f7; padding:48px; display:flex; flex-direction:column; gap:20px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#1f7a4d">03 · ACADEMIA</div><div style="font-size:40px; font-weight:700; line-height:1.15">Formação e investigação aplicada</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Mestrados e cursos profissionais com universidades e politécnicos, com os alunos a trabalhar nos programas reais.</p></div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">A razão de estarem juntos é o ciclo de iteração: um problema detectado no ensaio de manhã é corrigido na linha à tarde. É essa velocidade, e não o custo de mão de obra, que decide programas de sistemas autónomos.</p>
+</section>
+
+<section data-label="Cadeia" data-screen-label="20" data-speaker-notes="O que se faz cá desde o início, o que se importa e o que se nacionaliza depois." style="background:#fff; color:#111413; padding:88px 120px; display:flex; flex-direction:column; gap:42px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">Cadeia de fornecimento</h2>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding-bottom:16px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.12em; text-transform:uppercase; color:#6d7472"><span>Componente</span><span>Origem inicial</span><span>Estratégia</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Estrutura e compósitos</span><span style="color:#1f7a4d">Nacional</span><span style="color:#3c4341">Indústria de moldes e compósitos já existente</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Software de autonomia</span><span style="color:#1f7a4d">Nacional</span><span style="color:#3c4341">Equipa própria do hub, propriedade intelectual pública</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Sensores ópticos e térmicos</span><span style="color:#6d7472">Europa</span><span style="color:#3c4341">Nacionalizar montagem e calibração no ano 4</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Radar e guerra electrónica</span><span style="color:#6d7472">Europa</span><span style="color:#3c4341">Co-desenvolvimento com parceiro europeu</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Propulsão a pistão e turbina</span><span style="color:#6d7472">Importada</span><span style="color:#3c4341">Manutenção e revisão nacionais desde o ano 1</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Baterias e electrónica de potência</span><span style="color:#6d7472">Europa</span><span style="color:#3c4341">Montagem de pacotes no hub</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.6fr; gap:36px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px"><span style="font-weight:600">Comunicações satélite</span><span style="color:#6d7472">Europa</span><span style="color:#3c4341">Terminal europeu, encriptação nacional</span></div>
+  </div>
+  <p style="margin:0; font-size:28px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">Meta declarada: 60% de valor nacional na plataforma aérea de referência ao fim de cinco anos, medido em valor de compra e não em peso.</p>
+</section>
+
+<section data-label="Academia" data-screen-label="21" data-speaker-notes="A restrição real não é dinheiro, é gente. Este slide diz como se resolve." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">Academia</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">A restrição não é capital. É gente formada.</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start">
+    <div style="display:flex; flex-direction:column; gap:30px">
+      <div style="display:flex; gap:26px; align-items:baseline"><div style="font-family:'IBM Plex Mono',monospace; font-size:44px; color:#1f7a4d; min-width:130px">240</div><div style="font-size:28px; line-height:1.5; color:#3c4341">engenheiros e técnicos formados por ano, em cursos desenhados com o hub</div></div>
+      <div style="display:flex; gap:26px; align-items:baseline"><div style="font-family:'IBM Plex Mono',monospace; font-size:44px; color:#1f7a4d; min-width:130px">6</div><div style="font-size:28px; line-height:1.5; color:#3c4341">universidades e politécnicos parceiros, com equipas residentes no campus</div></div>
+      <div style="display:flex; gap:26px; align-items:baseline"><div style="font-family:'IBM Plex Mono',monospace; font-size:44px; color:#1f7a4d; min-width:130px">30 M€</div><div style="font-size:28px; line-height:1.5; color:#3c4341">por ano em investigação aplicada contratada, com tema definido pelos programas</div></div>
+    </div>
+    <div style="background:#0f1211; color:#f4f6f5; padding:52px; display:flex; flex-direction:column; gap:24px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; color:#5fbf8e">REGRA DE FUNCIONAMENTO</div>
+      <div style="font-size:38px; font-weight:700; line-height:1.3">Nenhuma tese sem um problema real de um dos sete programas.</div>
+      <p style="margin:0; font-size:26px; line-height:1.55; color:#a8b1af">Os alunos trabalham em componentes que entram em plataformas certificadas. A propriedade intelectual gerada com dinheiro do fundo fica no fundo.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="Localização" data-screen-label="22" data-speaker-notes="Critérios objetivos em vez de uma escolha política. A decisão de sítio fica para a fase 0." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Onde fica o hub: critérios antes de nomes</h2>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:36px 72px; flex:1; align-content:start">
+    <div style="border-top:3px solid #111413; padding-top:24px"><div style="font-size:34px; font-weight:700; margin-bottom:12px">Pista e espaço aéreo</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Pista com mais de 1 800 m e possibilidade de espaço aéreo segregado permanente para ensaio.</p></div>
+    <div style="border-top:3px solid #111413; padding-top:24px"><div style="font-size:34px; font-weight:700; margin-bottom:12px">Acesso a mar aberto</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Cais próprio ou acordo portuário a menos de 60 km, com profundidade para ensaio submarino.</p></div>
+    <div style="border-top:3px solid #111413; padding-top:24px"><div style="font-size:34px; font-weight:700; margin-bottom:12px">Massa crítica académica</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Universidade com engenharia aeroespacial, mecânica ou electrotécnica a menos de uma hora.</p></div>
+    <div style="border-top:3px solid #111413; padding-top:24px"><div style="font-size:34px; font-weight:700; margin-bottom:12px">Tecido industrial existente</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Moldes, compósitos, metalomecânica e electrónica num raio de 100 km.</p></div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">A localização é decidida por concurso entre candidaturas municipais e regionais avaliadas nestes quatro critérios, com decisão na fase preparatória.</p>
+</section>
+
+<section data-label="Emprego" data-screen-label="23" data-speaker-notes="O efeito económico. Valores de referência do programa, a validar em estudo de impacto." style="background:#0f1211; color:#f4f6f5; padding:96px 130px; display:flex; flex-direction:column; gap:52px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Efeito económico ao fim de dez anos</h2>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:56px">
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:88px; font-weight:800; letter-spacing:-0.04em; line-height:1">1 800</div><div style="font-size:27px; color:#c8cfcd; line-height:1.4">postos de trabalho directos no hub</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:88px; font-weight:800; letter-spacing:-0.04em; line-height:1">4 200</div><div style="font-size:27px; color:#c8cfcd; line-height:1.4">postos na cadeia de fornecimento nacional</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:88px; font-weight:800; letter-spacing:-0.04em; line-height:1">2 400</div><div style="font-size:27px; color:#c8cfcd; line-height:1.4">técnicos e engenheiros formados</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:88px; font-weight:800; letter-spacing:-0.04em; line-height:1">40%</div><div style="font-size:27px; color:#c8cfcd; line-height:1.4">da produção destinada a exportação</div></div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#a8b1af; max-width:1400px; text-wrap:pretty">Valores de referência do programa. A validar em estudo de impacto independente antes da decisão de investimento.</p>
+</section>
+
+<section data-label="Cap. 04" data-screen-label="24" data-speaker-notes="Abertura do capítulo de parcerias." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 04</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">Parcerias<br>institucionais</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">Quem define requisitos, quem compra e quem opera.</p>
+</section>
+
+<section data-label="Defesa" data-screen-label="25" data-speaker-notes="Sem cliente lançador não há programa. A Defesa é o cliente lançador." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#2f7d4f">Defesa e Forças Armadas</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">O cliente lançador define o requisito e compra a série</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:52px; flex:1; align-content:start">
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #2f7d4f; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Força Aérea</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Requisito operacional das duas plataformas aéreas militares, certificação e formação de operadores.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #2f7d4f; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Marinha</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Requisito de superfície e submarino, integração no dispositivo naval e ensaio em mar aberto.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #2f7d4f; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Exército e GNR</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Vigilância terrestre, fronteira e apoio a operações de fiscalização.</p></div>
+  </div>
+  <div style="background:#f6f8f7; padding:44px 52px; display:flex; justify-content:space-between; align-items:center; gap:48px">
+    <div style="font-size:32px; font-weight:700; line-height:1.35; max-width:900px">Compromisso pedido: encomenda pública plurianual de 1 250 M€ em dez anos, inscrita na Lei de Programação Militar.</div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#6d7472; text-align:right; line-height:1.6">≈ 125 M€/ano<br>≈ 2% da despesa de defesa</div>
+  </div>
+</section>
+
+<section data-label="Protecção civil" data-screen-label="26" data-speaker-notes="Os clientes civis dão volume e legitimidade pública ao programa." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#d4642a">Protecção civil, floresta e energia</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Os clientes civis dão volume à linha de produção</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:52px; flex:1; align-content:start">
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #d4642a; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Emergência e protecção civil</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Define o requisito de ataque à ignição e opera a frota de combate a incêndios em articulação com os meios tripulados.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #d4642a; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Gestão da floresta</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Vigilância térmica permanente das áreas de risco e verificação de faixas de gestão de combustível.</p></div>
+    <div style="display:flex; flex-direction:column; gap:18px; border-top:4px solid #b98424; padding-top:26px"><div style="font-size:34px; font-weight:700; line-height:1.2">Redes de energia e fibra</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Concessionárias contratam vala, cabo e cadastro à hora de máquina, sem investir em frota própria.</p></div>
+  </div>
+  <p style="margin:0; font-size:30px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">Estes contratos são receita comercial, não despesa pública de defesa: pagam-se por comparação directa com o custo actual de máquina tripulada e de meio aéreo alugado.</p>
+</section>
+
+<section data-label="Mar e ciência" data-screen-label="27" data-speaker-notes="A ligação científica dá credibilidade internacional e acesso a fundos europeus." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1c6f8c">Mar, ciência e ambiente</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">O mar é o argumento internacional do programa</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:72px; align-items:start">
+    <div style="display:flex; flex-direction:column; gap:34px">
+      <div style="border-left:3px solid #1c6f8c; padding-left:28px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Investigação marinha</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Institutos e universidades usam o submersível civil como infra-estrutura partilhada, com tempo de missão atribuído por concurso científico.</p></div>
+      <div style="border-left:3px solid #1c6f8c; padding-left:28px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Cabos submarinos</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Inspecção e vigilância de cabos de dados e condutas de energia — serviço vendável a operadores internacionais a partir de Portugal.</p></div>
+      <div style="border-left:3px solid #1c6f8c; padding-left:28px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Programas europeus</div><p style="margin:0; font-size:27px; line-height:1.5; color:#3c4341">Candidatura das componentes civis a financiamento europeu de investigação e de vigilância marítima.</p></div>
+    </div>
+    <img src="models/img/aqm_i-side.png" alt="OpenDrone_AQM_I, perfil" style="display:block; width:100%; height:auto; max-height:600px; object-fit:contain">
+  </div>
+</section>
+
+<section data-label="Cap. 05" data-screen-label="28" data-speaker-notes="Abertura do capítulo financeiro — a parte politicamente sensível." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 05</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">Financiamento</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">Uma contribuição sectorial única converte-se num fundo permanente.</p>
+</section>
+
+<section data-label="Quanto custa" data-screen-label="29" data-speaker-notes="Custo total do programa em dez anos, separando desenvolvimento de infraestrutura e operação." style="background:#fff; color:#111413; padding:88px 120px; display:flex; flex-direction:column; gap:42px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">Quanto custa, em dez anos</h2>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding-bottom:16px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.12em; text-transform:uppercase; color:#6d7472"><span>Rubrica</span><span style="text-align:right">Total</span><span>Notas</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:26px 0; border-bottom:1px solid #e2e5e3; font-size:28px; align-items:baseline"><span style="font-weight:600">Desenvolvimento das sete plataformas</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">1 810 M€</span><span style="font-size:24px; color:#6d7472">concentrado nos anos 2 a 7</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:26px 0; border-bottom:1px solid #e2e5e3; font-size:28px; align-items:baseline"><span style="font-weight:600">Infra-estrutura do hub</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">220 M€</span><span style="font-size:24px; color:#6d7472">campus, pista, tanque, bancadas</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:26px 0; border-bottom:1px solid #e2e5e3; font-size:28px; align-items:baseline"><span style="font-weight:600">Investigação aplicada e academia</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">300 M€</span><span style="font-size:24px; color:#6d7472">30 M€ por ano, contratados</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:26px 0; border-bottom:1px solid #e2e5e3; font-size:28px; align-items:baseline"><span style="font-weight:600">Operação e governação</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">120 M€</span><span style="font-size:24px; color:#6d7472">estrutura do fundo e do hub</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:26px 0; border-bottom:1px solid #e2e5e3; font-size:28px; align-items:baseline"><span style="font-weight:600">Certificação e ensaio</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">90 M€</span><span style="font-size:24px; color:#6d7472">civil e militar, sete plataformas</span></div>
+    <div style="display:grid; grid-template-columns:2.2fr 1fr 1.4fr; gap:40px; padding:30px 0 0; font-size:34px; align-items:baseline; font-weight:700"><span>Total</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right; color:#1f7a4d">2 540 M€</span><span></span></div>
+  </div>
+  <p style="margin:0; font-size:28px; line-height:1.55; color:#3c4341; max-width:1400px; text-wrap:pretty">A produção em série não está aqui: é paga pela encomenda pública e pela exportação, ao preço unitário indicado em cada memorando.</p>
+</section>
+
+<section data-label="Contribuição" data-screen-label="30" data-speaker-notes="A proposta fiscal. Contribuição extraordinária de um ano sobre quatro sectores concentrados e rentáveis." style="background:#fff; color:#111413; padding:88px 120px; display:flex; flex-direction:column; gap:36px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:14px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#1f7a4d">Origem do capital</div>
+    <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em; line-height:1.05">Contribuição sectorial extraordinária, uma só vez</h2>
+  </div>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding-bottom:14px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:19px; letter-spacing:0.12em; text-transform:uppercase; color:#6d7472"><span>Sector</span><span>Base de incidência</span><span style="text-align:right">Taxa</span><span style="text-align:right">Receita</span></div>
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Banca</span><span style="color:#3c4341; font-size:25px">Proveitos totais · 16 380 M€ (2025)</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">3,0%</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">491 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Telecomunicações</span><span style="color:#3c4341; font-size:25px">Receitas retalhistas · 4 200 M€ (2024)</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">2,0%</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">84 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Retalho alimentar</span><span style="color:#3c4341; font-size:25px">Volume de negócios · ≈ 26 000 M€ (est.)</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">0,5%</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">130 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding:22px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Energia</span><span style="color:#3c4341; font-size:25px">Volume de negócios · ≈ 25 000 M€ (est.)</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">1,0%</span><span style="font-family:'IBM Plex Mono',monospace; text-align:right">250 M€</span></div>
+    <div style="display:grid; grid-template-columns:1.5fr 1.6fr 0.8fr 1fr; gap:36px; padding:26px 0 0; font-size:32px; align-items:baseline; font-weight:700"><span>Contribuição total</span><span></span><span></span><span style="font-family:'IBM Plex Mono',monospace; text-align:right; color:#1f7a4d">955 M€</span></div>
+  </div>
+  <div style="display:flex; gap:56px; align-items:flex-start; background:#f6f8f7; padding:38px 44px">
+    <p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341; flex:1; text-wrap:pretty">Taxas diferenciadas pela margem de cada sector: a banca declarou 6,32 mil milhões de lucro em 2025, o retalho opera com margem fina. A contribuição é única e não recorrente — o que se cria é o fundo, não o imposto.</p>
+    <p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341; flex:1; text-wrap:pretty">Contrapartida oferecida aos contribuintes: acesso preferencial a serviços do hub e representação sem voto no conselho consultivo do fundo.</p>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:19px; color:#9aa19f">Banco de Portugal (2025) · ANACOM (2024) · INE, estatísticas do comércio (2024) · estimativas próprias assinaladas</div>
+</section>
+
+<section data-label="Fundo" data-screen-label="31" data-speaker-notes="A dotação inicial e as três fontes. O fundo é permanente, a contribuição não." style="background:#0f1211; color:#f4f6f5; padding:96px 130px; display:flex; flex-direction:column; gap:48px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#5fbf8e">Fundo Soberano de Sistemas Autónomos</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Dotação inicial de 1 400 milhões</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:56px">
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:80px; font-weight:800; letter-spacing:-0.04em; line-height:1">955 M€</div><div style="font-size:27px; color:#c8cfcd; line-height:1.45">contribuição sectorial extraordinária</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:80px; font-weight:800; letter-spacing:-0.04em; line-height:1">295 M€</div><div style="font-size:27px; color:#c8cfcd; line-height:1.45">Orçamento do Estado, via Lei de Programação Militar</div></div>
+    <div style="display:flex; flex-direction:column; gap:14px; border-top:4px solid #5fbf8e; padding-top:26px"><div style="font-size:80px; font-weight:800; letter-spacing:-0.04em; line-height:1">150 M€</div><div style="font-size:27px; color:#c8cfcd; line-height:1.45">programas europeus de defesa e investigação</div></div>
+  </div>
+  <div style="display:flex; gap:64px; align-items:flex-end; margin-top:auto">
+    <div style="flex:1"><p style="margin:0; font-size:30px; line-height:1.55; color:#a8b1af; text-wrap:pretty">O fundo não distribui subsídios. Financia desenvolvimento contra marcos técnicos verificados, detém a propriedade intelectual gerada e recebe royalties sobre cada unidade vendida.</p></div>
+    <div style="background:#1a1f1d; padding:36px 44px"><div style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#5fbf8e; margin-bottom:12px">DOTAÇÃO TOTAL</div><div style="font-size:72px; font-weight:800; letter-spacing:-0.03em">1 400 M€</div></div>
+  </div>
+</section>
+
+<section data-label="Governação" data-screen-label="32" data-speaker-notes="Como se evita que isto se transforme num fundo de captura política." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Regras que protegem o fundo de si mesmo</h2>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:34px 72px; flex:1; align-content:start">
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Desembolso contra marcos</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Cada tranche depende de um marco técnico verificado por entidade independente. Marco falhado suspende o desembolso.</p></div>
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Propriedade intelectual pública</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Tudo o que é desenvolvido com dinheiro do fundo pertence ao fundo, com licença de uso aos parceiros industriais.</p></div>
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Retorno obrigatório</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Royalty de 5% sobre cada unidade vendida, nacional ou exportada, entra no fundo e financia a geração seguinte.</p></div>
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Mandatos longos e desfasados</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Conselho de administração com mandatos de seis anos desfasados do ciclo eleitoral, escrutinado pelo parlamento.</p></div>
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Limite de despesa corrente</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Máximo de 5% da dotação anual em estrutura própria. O resto vai para desenvolvimento, ensaio e formação.</p></div>
+    <div style="border-top:3px solid #1f7a4d; padding-top:22px"><div style="font-size:32px; font-weight:700; margin-bottom:10px">Relatório público anual</div><p style="margin:0; font-size:26px; line-height:1.5; color:#3c4341">Contas, marcos cumpridos e falhados publicados em dados abertos, com auditoria externa.</p></div>
+  </div>
+</section>
+
+<section data-label="Projecção" data-screen-label="33" data-speaker-notes="O modelo de sustentabilidade: o fundo termina a década acima da dotação inicial." style="background:#fff; color:#111413; padding:80px 110px; display:flex; flex-direction:column; gap:32px; font-family:Manrope,sans-serif">
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:48px">
+    <h2 style="margin:0; font-size:64px; font-weight:800; letter-spacing:-0.035em">Projecção do fundo a dez anos</h2>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9aa19f; text-align:right; line-height:1.6">milhões de euros<br>rendimento aplicado de 4% ao ano</div>
+  </div>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding-bottom:12px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:19px; letter-spacing:0.1em; text-transform:uppercase; color:#6d7472"><span>Ano</span><span style="text-align:right">Rendimento</span><span style="text-align:right">Despesa</span><span style="text-align:right">Retorno</span><span style="text-align:right">Saldo final</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>1</span><span style="text-align:right">56</span><span style="text-align:right">150</span><span style="text-align:right">—</span><span style="text-align:right; font-weight:500">1 306</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>2</span><span style="text-align:right">52</span><span style="text-align:right">250</span><span style="text-align:right">20</span><span style="text-align:right; font-weight:500">1 128</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>3</span><span style="text-align:right">45</span><span style="text-align:right">340</span><span style="text-align:right">60</span><span style="text-align:right; font-weight:500">893</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>4</span><span style="text-align:right">36</span><span style="text-align:right">380</span><span style="text-align:right">140</span><span style="text-align:right; font-weight:500">689</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px; background:#fbfcfb"><span>5</span><span style="text-align:right">28</span><span style="text-align:right">360</span><span style="text-align:right">230</span><span style="text-align:right; font-weight:600; color:#1f7a4d">587</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>6</span><span style="text-align:right">23</span><span style="text-align:right">300</span><span style="text-align:right">300</span><span style="text-align:right; font-weight:500">610</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>7</span><span style="text-align:right">24</span><span style="text-align:right">250</span><span style="text-align:right">340</span><span style="text-align:right; font-weight:500">724</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>8</span><span style="text-align:right">29</span><span style="text-align:right">210</span><span style="text-align:right">380</span><span style="text-align:right; font-weight:500">923</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:1px solid #eef1f0; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>9</span><span style="text-align:right">37</span><span style="text-align:right">170</span><span style="text-align:right">400</span><span style="text-align:right; font-weight:500">1 190</span></div>
+    <div style="display:grid; grid-template-columns:0.7fr repeat(4,1fr); gap:24px; padding:15px 0; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:25px"><span>10</span><span style="text-align:right">48</span><span style="text-align:right">130</span><span style="text-align:right">420</span><span style="text-align:right; font-weight:700; color:#1f7a4d">1 528</span></div>
+  </div>
+  <p style="margin:0; font-size:27px; line-height:1.55; color:#3c4341; max-width:1500px; text-wrap:pretty">O ponto baixo é o ano 5, com 587 milhões em caixa. A partir do ano 6 o retorno da produção e da exportação supera a despesa de desenvolvimento e o fundo termina a década acima da dotação inicial — sem nova contribuição.</p>
+</section>
+
+<section data-label="Retorno" data-screen-label="34" data-speaker-notes="De onde vem o retorno: encomenda pública, exportação e serviços." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">De onde vem o retorno</h2>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:56px; flex:1; align-content:start">
+    <div style="display:flex; flex-direction:column; gap:16px; border-top:4px solid #1f7a4d; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:56px; color:#111413">1 250 M€</div><div style="font-size:32px; font-weight:700">Encomenda pública</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Defesa, protecção civil e autoridade marítima, em dez anos. Royalty de 5% para o fundo.</p></div>
+    <div style="display:flex; flex-direction:column; gap:16px; border-top:4px solid #1f7a4d; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:56px; color:#111413">900 M€</div><div style="font-size:32px; font-weight:700">Exportação</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">40% da produção, sobretudo plataformas civis e de vigilância marítima, para mercados europeu e lusófono.</p></div>
+    <div style="display:flex; flex-direction:column; gap:16px; border-top:4px solid #1f7a4d; padding-top:26px"><div style="font-family:'IBM Plex Mono',monospace; font-size:56px; color:#111413">340 M€</div><div style="font-size:32px; font-weight:700">Serviços</div><p style="margin:0; font-size:26px; line-height:1.55; color:#3c4341">Hora de máquina em vala e cabo, inspecção de cabos submarinos, tempo de missão científico e formação.</p></div>
+  </div>
+  <div style="background:#f6f8f7; padding:44px 52px; display:flex; justify-content:space-between; align-items:center; gap:48px">
+    <div style="font-size:32px; font-weight:700; line-height:1.35; max-width:1000px">O modelo só fecha com encomenda pública plurianual garantida. Sem cliente lançador, o fundo financia protótipos que não chegam a série.</div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#6d7472; text-align:right; line-height:1.6">2 490 M€<br>retorno acumulado</div>
+  </div>
+</section>
+
+<section data-label="Riscos" data-screen-label="35" data-speaker-notes="Os quatro riscos que matam este programa, e o que fazemos sobre cada um." style="background:#fff; color:#111413; padding:88px 120px; display:flex; flex-direction:column; gap:40px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">Riscos e mitigação</h2>
+  <div style="display:flex; flex-direction:column">
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding-bottom:14px; border-bottom:2px solid #111413; font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.12em; text-transform:uppercase; color:#6d7472"><span>Risco</span><span>Gravidade</span><span>Mitigação</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Contribuição sectorial não passa</span><span style="color:#b0341f">Alta</span><span style="color:#3c4341; font-size:26px">Arranque faseado com dotação pública e europeia; contribuição reduzida e alargada a mais sectores</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Encomenda pública não se materializa</span><span style="color:#b0341f">Alta</span><span style="color:#3c4341; font-size:26px">Compromisso plurianual inscrito na Lei de Programação Militar como condição de arranque do fundo</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Falta de engenheiros qualificados</span><span style="color:#c07a12">Média</span><span style="color:#3c4341; font-size:26px">Academia no ano 1, antes da linha de produção; contratação de diáspora com contrato de regresso</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Certificação civil demora mais do que o previsto</span><span style="color:#c07a12">Média</span><span style="color:#3c4341; font-size:26px">Envolver o regulador desde o desenho; começar pelas plataformas de operação segregada</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Dependência de componentes importados</span><span style="color:#c07a12">Média</span><span style="color:#3c4341; font-size:26px">Duplo fornecedor obrigatório em sensores e propulsão; plano de nacionalização por etapas</span></div>
+    <div style="display:grid; grid-template-columns:1.3fr 0.6fr 2fr; gap:40px; padding:24px 0; border-bottom:1px solid #e2e5e3; font-size:27px; align-items:baseline"><span style="font-weight:600">Captura política do fundo</span><span style="color:#6d7472">Baixa</span><span style="color:#3c4341; font-size:26px">Mandatos desfasados, auditoria externa e publicação de marcos falhados</span></div>
+  </div>
+</section>
+
+<section data-label="Cap. 06" data-screen-label="36" data-speaker-notes="Abertura do capítulo de execução." style="background:#0f1211; color:#f4f6f5; padding:110px 130px; display:flex; flex-direction:column; justify-content:flex-end; gap:32px; font-family:Manrope,sans-serif">
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; letter-spacing:0.2em; color:#5fbf8e">CAPÍTULO 06</div>
+  <h2 style="margin:0; font-size:110px; font-weight:800; letter-spacing:-0.04em; line-height:1">Execução</h2>
+  <p style="margin:0; font-size:34px; color:#a8b1af; max-width:1100px; line-height:1.5">Dez anos, quatro fases, métricas públicas.</p>
+</section>
+
+<section data-label="Cronograma" data-screen-label="37" data-speaker-notes="Ordem deliberada: as plataformas civis primeiro, porque certificam mais depressa e mostram resultado público." style="background:#fff; color:#111413; padding:96px 120px; display:flex; flex-direction:column; gap:48px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">Cronograma</h2>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:44px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:22px"><div style="height:6px; background:#1f7a4d"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">ANOS 1–2</div><div style="font-size:36px; font-weight:700; line-height:1.2">Fundação</div><ul style="margin:0; padding-left:24px; font-size:25px; line-height:1.6; color:#3c4341"><li>Lei do fundo e contribuição</li><li>Concurso de localização</li><li>Academia abre</li><li>Início do AC_B e do T</li></ul></div>
+    <div style="display:flex; flex-direction:column; gap:22px"><div style="height:6px; background:#1f7a4d"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">ANOS 3–5</div><div style="font-size:36px; font-weight:700; line-height:1.2">Primeiras plataformas</div><ul style="margin:0; padding-left:24px; font-size:25px; line-height:1.6; color:#3c4341"><li>Voo do AC_B</li><li>T em obra real</li><li>Início do AM e do AQM</li><li>Linha de montagem operacional</li></ul></div>
+    <div style="display:flex; flex-direction:column; gap:22px"><div style="height:6px; background:#1f7a4d"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">ANOS 5–7</div><div style="font-size:36px; font-weight:700; line-height:1.2">Escala militar</div><ul style="margin:0; padding-left:24px; font-size:25px; line-height:1.6; color:#3c4341"><li>Entrega do AM à Força Aérea</li><li>AQM em patrulha</li><li>Início do AM_S e do AQM_S</li><li>Primeira exportação</li></ul></div>
+    <div style="display:flex; flex-direction:column; gap:22px"><div style="height:6px; background:#1f7a4d"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#1f7a4d">ANOS 8–10</div><div style="font-size:36px; font-weight:700; line-height:1.2">Maturidade</div><ul style="margin:0; padding-left:24px; font-size:25px; line-height:1.6; color:#3c4341"><li>Sete plataformas em produção</li><li>AQM_I em campanha científica</li><li>Fundo acima da dotação inicial</li><li>Segunda geração em desenho</li></ul></div>
+  </div>
+  <p style="margin:0; font-size:28px; line-height:1.55; color:#3c4341; max-width:1450px; text-wrap:pretty">A ordem é deliberada: as plataformas civis vêm primeiro porque certificam mais depressa, dão resultado público visível e treinam a linha de produção antes de entrar o programa militar.</p>
+</section>
+
+<section data-label="Métricas" data-screen-label="38" data-speaker-notes="Métricas que se publicam todos os anos. Se falharem, o programa é revisto." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Como se mede o sucesso</h2>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:36px 72px; flex:1; align-content:start">
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Valor nacional na plataforma de referência</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">60% · ano 5</span></div>
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Plataformas certificadas e em serviço</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">7 · ano 10</span></div>
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Postos de trabalho directos e indirectos</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">6 000 · ano 10</span></div>
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Saldo do fundo face à dotação inicial</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">+9% · ano 10</span></div>
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Área ardida evitada por intervenção autónoma</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">medida anual</span></div>
+    <div style="display:flex; justify-content:space-between; gap:32px; border-bottom:1px solid #e2e5e3; padding-bottom:20px; align-items:baseline"><span style="font-size:29px">Dias de patrulha na zona económica exclusiva</span><span style="font-family:'IBM Plex Mono',monospace; font-size:32px; color:#1f7a4d; white-space:nowrap">medida anual</span></div>
+  </div>
+  <p style="margin:0; font-size:28px; line-height:1.55; color:#3c4341; max-width:1450px">Publicadas em dados abertos no relatório anual do fundo, com auditoria externa. Duas metas falhadas consecutivas obrigam a revisão do programa em sede parlamentar.</p>
+</section>
+
+<section data-label="Decisões" data-screen-label="39" data-speaker-notes="O pedido concreto. Três decisões, nada mais." style="background:#0f1211; color:#f4f6f5; padding:96px 130px; display:flex; flex-direction:column; gap:52px; font-family:Manrope,sans-serif">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; letter-spacing:0.2em; text-transform:uppercase; color:#5fbf8e">O que pedimos agora</div>
+    <h2 style="margin:0; font-size:76px; font-weight:800; letter-spacing:-0.035em; line-height:1.05; max-width:1400px">Três decisões para arrancar</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:56px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:20px; border-top:4px solid #5fbf8e; padding-top:28px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#5fbf8e">01</div><div style="font-size:38px; font-weight:700; line-height:1.2">Criar o fundo por lei</div><p style="margin:0; font-size:26px; line-height:1.55; color:#c8cfcd">Com a contribuição sectorial única, a dotação pública e as regras de governação deste documento.</p></div>
+    <div style="display:flex; flex-direction:column; gap:20px; border-top:4px solid #5fbf8e; padding-top:28px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#5fbf8e">02</div><div style="font-size:38px; font-weight:700; line-height:1.2">Garantir o cliente lançador</div><p style="margin:0; font-size:26px; line-height:1.55; color:#c8cfcd">Inscrever 1 250 M€ de encomenda plurianual na Lei de Programação Militar e nos planos de protecção civil.</p></div>
+    <div style="display:flex; flex-direction:column; gap:20px; border-top:4px solid #5fbf8e; padding-top:28px"><div style="font-family:'IBM Plex Mono',monospace; font-size:22px; color:#5fbf8e">03</div><div style="font-size:38px; font-weight:700; line-height:1.2">Abrir o concurso de localização</div><p style="margin:0; font-size:26px; line-height:1.55; color:#c8cfcd">Quatro critérios objectivos, candidaturas municipais e regionais, decisão em doze meses.</p></div>
+  </div>
+  <p style="margin:0; font-size:32px; line-height:1.5; color:#f4f6f5; max-width:1350px; text-wrap:pretty">As três decisões custam, no primeiro ano, 150 milhões de euros — 2,5% da despesa nacional em defesa de 2025.</p>
+</section>
+
+<section data-label="Fontes" data-screen-label="40" data-speaker-notes="Fontes e estatuto dos números. Importante deixar claro o que é público e o que é estimativa." style="background:#fff; color:#111413; padding:96px 130px; display:flex; flex-direction:column; gap:44px; font-family:Manrope,sans-serif">
+  <h2 style="margin:0; font-size:68px; font-weight:800; letter-spacing:-0.035em">Fontes e notas</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px">
+    <div style="display:flex; flex-direction:column; gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Números públicos</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Despesa de defesa 2023–2025 — relatório anual da NATO, citado pelo ECO (2026)</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Orçamento e prioridades sectoriais — Ministério da Defesa, OE2026</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Capacidade industrial europeia — IISS, Balanço Militar 2026</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Proveitos e lucros da banca — Banco de Portugal, dados de 2025</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Receitas retalhistas de comunicações — ANACOM, 2024</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Volume de negócios do comércio — INE, 2024</div>
+      <div style="font-size:25px; line-height:1.6; color:#3c4341">Mercado global de drones militares — Global Market Insights e SNS Insider, 2026</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:0.14em; text-transform:uppercase; color:#1f7a4d">Estatuto dos números do programa</div>
+      <p style="margin:0; font-size:26px; line-height:1.6; color:#3c4341; text-wrap:pretty">Todos os valores de plataforma — dimensões, desempenho, custo unitário e custo de desenvolvimento — são estimativas de conceito. Servem para dimensionar o programa e comparar alternativas, não para especificar uma aquisição.</p>
+      <p style="margin:0; font-size:26px; line-height:1.6; color:#3c4341; text-wrap:pretty">As bases de incidência do retalho alimentar e da energia são estimativas próprias a partir de agregados do INE e de relatórios sectoriais, e devem ser substituídas por dados fiscais na versão legislativa.</p>
+      <p style="margin:0; font-size:26px; line-height:1.6; color:#3c4341; text-wrap:pretty">Os modelos tridimensionais que acompanham este documento são maquetas de proporção, não desenhos de engenharia.</p>
+      <div style="margin-top:14px; padding-top:24px; border-top:1px solid #e2e5e3; font-family:'IBM Plex Mono',monospace; font-size:21px; color:#6d7472; line-height:1.7">Documento de trabalho · OpenDrone<br>Sete memorandos de plataforma e sete modelos 3D em anexo</div>
+    </div>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>
